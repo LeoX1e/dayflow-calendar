@@ -196,6 +196,7 @@ final class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
             guard let requestId = item["requestId"] as? String, !requestId.isEmpty,
                   let rawKind = item["kind"] as? String,
                   let kind = ScheduleItem.Kind(rawValue: rawKind),
+                  let entityId = item["entityId"] as? String,
                   let title = item["title"] as? String,
                   let body = item["body"] as? String,
                   let fireAt = Self.milliseconds(item["fireAt"]),
@@ -450,6 +451,9 @@ final class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
             application.activate(ignoringOtherApps: true)
         }
         if let window = application.windows.first {
+            if window.isMiniaturized {
+                window.deminiaturize(nil)
+            }
             window.makeKeyAndOrderFront(nil)
         }
     }
