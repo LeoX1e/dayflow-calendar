@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primitive-blue: oklch(0.58 0.205 259);
+    --primitive-red: oklch(0.63 0.22 27);
+    --primitive-ink: oklch(0.22 0.012 260);
+    --primitive-paper: oklch(0.985 0.003 250);
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 42%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 88%;
+    --input: 240 5.9% 88%;
+    --ring: 211 100% 50%;
+    --radius: 0.75rem;
+    --app-bg: oklch(0.975 0.003 250);
+    --surface: oklch(0.995 0.002 250);
+    --surface-raised: oklch(1 0 0);
+    --sidebar-bg: oklch(0.955 0.005 250 / 0.88);
+    --sidebar-active: oklch(0.90 0.008 250 / 0.78);
+    --text-primary: oklch(0.22 0.012 260);
+    --text-secondary: oklch(0.47 0.015 260);
+    --text-tertiary: oklch(0.57 0.014 260);
+    --line: oklch(0.88 0.006 250 / 0.8);
+    --line-strong: oklch(0.81 0.008 250);
+    --accent-blue: var(--primitive-blue);
+    --accent-blue-hover: oklch(0.53 0.20 259);
+    --accent-soft: oklch(0.95 0.025 259);
+    --danger: var(--primitive-red);
+    --shadow-dialog: 0 24px 80px oklch(0.2 0.02 260 / 0.2), 0 2px 12px oklch(0.2 0.02 260 / 0.08);
+  }
+
+  .dark {
+    --background: 240 6% 8%;
+    --foreground: 0 0% 96%;
+    --card: 240 5% 11%;
+    --card-foreground: 0 0% 96%;
+    --popover: 240 5% 13%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 18%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 240 4% 18%;
+    --muted-foreground: 240 5% 68%;
+    --accent: 240 4% 20%;
+    --accent-foreground: 0 0% 96%;
+    --border: 240 4% 23%;
+    --input: 240 4% 25%;
+    --ring: 210 100% 60%;
+    --app-bg: oklch(0.16 0.012 260);
+    --surface: oklch(0.19 0.012 260);
+    --surface-raised: oklch(0.225 0.012 260);
+    --sidebar-bg: oklch(0.18 0.012 260 / 0.9);
+    --sidebar-active: oklch(0.29 0.014 260 / 0.82);
+    --text-primary: oklch(0.95 0.005 250);
+    --text-secondary: oklch(0.75 0.01 260);
+    --text-tertiary: oklch(0.65 0.01 260);
+    --line: oklch(0.34 0.012 260 / 0.72);
+    --line-strong: oklch(0.42 0.012 260);
+    --accent-blue: oklch(0.67 0.18 259);
+    --accent-blue-hover: oklch(0.72 0.17 259);
+    --accent-soft: oklch(0.27 0.04 259);
+    --danger: oklch(0.69 0.19 27);
+    --shadow-dialog: 0 24px 80px oklch(0 0 0 / 0.48), 0 2px 12px oklch(0 0 0 / 0.28);
+  }
+
+  * { box-sizing: border-box; border-color: hsl(var(--border)); }
+  html, body, #root { min-height: 100%; margin: 0; }
+  body {
+    background: var(--app-bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+  }
+  button, input, textarea, select { font: inherit; }
+  button { color: inherit; }
+  button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+  button:not(:disabled) { cursor: pointer; }
+  button:disabled { cursor: not-allowed; opacity: 0.45; }
+  :focus-visible { outline: 3px solid color-mix(in oklch, var(--accent-blue) 48%, transparent); outline-offset: 2px; }
+  ::selection { background: color-mix(in oklch, var(--accent-blue) 25%, transparent); }
+}

@@ -114,8 +114,8 @@ final class DayflowSchemeHandler: NSObject, WKURLSchemeHandler {
         switch pathExtension.lowercased() {
         case "html", "htm": return "text/html"
         case "js", "mjs": return "text/javascript"
-        case "css", "map": return "application/json"
-        case "json": return "application/json"
+        case "css": return "text/css"
+        case "json", "map": return "application/json"
         case "svg": return "image/svg+xml"
         case "png": return "image/png"
         case "jpg", "jpeg": return "image/jpeg"
