@@ -1,6 +1,6 @@
 # 日程中枢 Dayflow
 
-一款 Apple 风格的本地优先日历与提醒事项应用，支持 AI / Agent 通过标准 JSON、一键导入链接和 iCalendar 文件导入日程。
+一款简单的本地优先日历与提醒事项应用，支持 AI / Agent 通过标准 JSON、一键导入链接和 iCalendar 文件导入日程。
 
 ## 下载与安装
 
